@@ -76,10 +76,17 @@ def four_d_plot():
 
 
 if __name__ == '__main__':
+
     data = pd.read_csv("task_1.csv", index_col="id")
+
+    # 4.1
     # pair_plot()
+
+    # 4.2
     # four_d_plot()
-    price_transformation()
+
+    # 4.3
+    # price_transformation()
 
 
 
