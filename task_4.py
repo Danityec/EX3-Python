@@ -77,7 +77,7 @@ def four_d_plot():
 
 if __name__ == '__main__':
 
-    data = pd.read_csv("task_1.csv", index_col="id")
+    data = pd.read_csv("mobile_prices_task_1.csv", index_col="id")
 
     # 4.1
     # pair_plot()

@@ -55,10 +55,10 @@ if __name__ == '__main__':
     data['memory'] = data.apply(lambda row: calculate_mb_to_gb(row['memory']), axis=1)
 
     # 1.7
-    data.describe().to_csv('describe.csv')
+    print(data.describe())
 
     # 1.8
     price_histogram()
 
     # saving new columns to a file for future use
-    data.to_csv('task_1.csv')
+    data.to_csv('mobile_prices_task_1.csv')
