@@ -1,4 +1,5 @@
 # DANIT
+import csv
 
 import pandas as pd
 import seaborn as sns
@@ -26,7 +27,8 @@ corrMatrix = df.corr()
 sns.heatmap(corrMatrix, annot=True, vmin=-1, vmax=1)
 plt.show()
 print(mobiles.head(10))
-np.savetxt('mobile_prices_converted.csv', (mobiles), delimiter=',')
+
+df = mobiles.to_csv('mobile_prices_converted.csv', index=False)
 
 
 
