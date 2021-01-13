@@ -1,9 +1,6 @@
 import pandas as pd
-import math
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def price_transformation():
@@ -80,13 +77,10 @@ if __name__ == '__main__':
     data = pd.read_csv("mobile_prices_task_1.csv", index_col="id")
 
     # 4.1
-    # pair_plot()
+    pair_plot()
 
     # 4.2
-    # four_d_plot()
+    four_d_plot()
 
     # 4.3
-    # price_transformation()
-
-
-
+    price_transformation()

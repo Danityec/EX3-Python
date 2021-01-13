@@ -51,7 +51,7 @@ def correlation_graph(data_correlation):
 
 
 def price_battery_power_correlation():
-    plt.scatter(data.battery_power, data.price, s=data.price/20, alpha=0.3, cmap='jet', edgecolors='none')
+    plt.scatter(data.battery_power, data.price, alpha=0.3, cmap='jet', edgecolors='none')
     plt.title('Price VS Battery power correlation'.format(data.battery_power, data.price))
     plt.xlabel('Price')
     plt.ylabel('battery power')
@@ -59,7 +59,7 @@ def price_battery_power_correlation():
 
 
 def price_ram_correlation():
-    plt.scatter(data.ram, data.price, s=data.price/20, alpha=0.3, cmap='jet', edgecolors='none')
+    plt.scatter(data.ram, data.price, alpha=0.3, cmap='jet', edgecolors='none')
     plt.title('Price VS Ram correlation'.format(data.ram, data.price))
     plt.xlabel('Price')
     plt.ylabel('Ram')
@@ -67,7 +67,7 @@ def price_ram_correlation():
 
 
 def price_gen_correlation():
-    plt.scatter(data.gen, data.price, s=data.price/20, alpha=0.3, cmap='jet', edgecolors='none')
+    plt.scatter(data.gen, data.price, alpha=0.3, cmap='jet', edgecolors='none')
     plt.title('Price VS Gen correlation'.format(data.gen, data.price))
     plt.xlabel('Price')
     plt.ylabel('Gen')
@@ -82,23 +82,23 @@ def price_pivot_table():
 
 
 if __name__ == '__main__':
-    data = pd.read_csv("mobile_price_1.csv", index_col="id")
+    data = pd.read_csv("mobile_prices_task_1.csv", index_col="id")
 
     # 2.1
-    # correlation_heatmap()
-
-    # 2.2
-    # cores_correlation()
-    # speed_correlation()
-    # sim_correlation()
-    # wifi_correlation()
-    # bluetooth_correlation()
-    # screen_correlation()
+    correlation_heatmap()
 
     # 2.3
-    # price_battery_power_correlation()
-    # price_ram_correlation()
-    # price_gen_correlation()
+    cores_correlation()
+    speed_correlation()
+    sim_correlation()
+    wifi_correlation()
+    bluetooth_correlation()
+    screen_correlation()
 
     # 2.4
-    # price_pivot_table()
+    price_battery_power_correlation()
+    price_ram_correlation()
+    price_gen_correlation()
+
+    # 2.5
+    price_pivot_table()
